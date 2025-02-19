@@ -1,10 +1,5 @@
 public class Q5Range {  
     public static void main(String args[]) {  
-        // Ensure an argument is provided and exit if none is given
-        if (args.length == 0) {
-            return;
-        }
-
         // Parse the input argument to an integer
         int x = Integer.parseInt(args[0]);
 
