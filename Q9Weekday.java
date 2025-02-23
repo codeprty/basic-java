@@ -1,34 +1,25 @@
+import java.util.Scanner;
+
 public class Q9Weekday {
     public static void main(String[] args) {
-        // Parse the argument to an integer
-        int number = Integer.parseInt(args[0]);
+        // Create Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
 
-        // Determine the corresponding weekday and print the result
-        switch(number) {
-            case 1:
-                System.out.println("Monday");
-                break;
-            case 2:
-                System.out.println("Tuesday");
-                break;
-            case 3:
-                System.out.println("Wednesday");
-                break;
-            case 4:
-                System.out.println("Thursday");
-                break;
-            case 5:
-                System.out.println("Friday");
-                break;
-            case 6:
-                System.out.println("Saturday");
-                break;
-            case 7:
-                System.out.println("Sunday");
-                break;
-            default:
-                System.out.println("Please enter a number between 1 and 7.");
-                break;
+        // Prompt user for input
+        System.out.print("Input number: ");
+        int number = scanner.nextInt();
+
+        // Array of weekday names
+        String[] weekdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+        // Check if the number is within the valid range
+        if (number >= 1 && number <= 7) {
+            System.out.println(weekdays[number - 1]); // Print the corresponding weekday
+        } else {
+            System.out.println("Please enter a number between 1 and 7.");
         }
+
+        // Close Scanner
+        scanner.close();
     }
 }

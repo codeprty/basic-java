@@ -1,18 +1,26 @@
+import java.util.Scanner;
+
 public class Q11Triangle {
     public static void main(String[] args) {
-        // Parse the input argument to an integer
-        int rows = Integer.parseInt(args[0]);
+        // Create Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for number of rows
+        System.out.print("Input number of rows: ");
+        int rows = scanner.nextInt();
 
         int num = 1;
 
-        // Loop through rows
+        // Generate the right-angle triangle pattern
         for (int i = 1; i <= rows; i++) {
-            // Print numbers in each row
             for (int j = 1; j <= i; j++) {
                 System.out.print(num + " ");
                 num++;
             }
             System.out.println();
         }
+
+        // Close Scanner
+        scanner.close();
     }
 }
